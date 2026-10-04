@@ -1,0 +1,498 @@
+[
+  {
+    "intent": "greeting",
+    "question": "Hello",
+    "examples": ["hi", "hello", "hey", "salam", "assalam o alaikum", "good morning", "good evening"],
+    "keywords": ["hi", "hello", "hey", "salam", "greeting"],
+    "category": "general",
+    "answer": "Hello! 👋 I'm UrClinic, your AI hospital information assistant. You can ask me about symptoms, hospital departments, medical tests, medicines, appointments, emergencies, and general health information."
+  },
+  {
+    "intent": "hospital_overview",
+    "question": "What can UrClinic help me with?",
+    "examples": ["what can you help me with", "what do you know", "what questions can I ask", "what services do you provide"],
+    "keywords": ["help", "services", "topics", "information", "urclinic"],
+    "category": "general",
+    "answer": "I can provide general educational information about common symptoms, hospital departments, medical tests, medicines and prescriptions, appointments, emergency warning signs, and basic health topics. I cannot diagnose conditions or replace a doctor."
+  },
+  {
+    "intent": "fever",
+    "question": "What should I know about fever?",
+    "examples": ["I have fever", "what if I have a fever", "why do I have fever", "high temperature", "I have temperature", "fevr"],
+    "keywords": ["fever", "temperature", "hot", "febrile", "high temperature"],
+    "category": "symptoms",
+    "answer": "Fever can occur with many infections and other conditions. Consider the temperature, how long it has lasted, and any other symptoms. If the fever is severe, persistent, worsening, or accompanied by concerning symptoms, seek medical assessment."
+  },
+  {
+    "intent": "cough",
+    "question": "Who should I consult for a cough?",
+    "examples": ["I have cough", "what doctor treats cough", "whom should I consult for cough", "persistent coughing", "coughing problem", "cogh", "I am coughing"],
+    "keywords": ["cough", "coughing", "persistent cough", "phlegm", "respiratory"],
+    "category": "symptoms",
+    "answer": "For a persistent or concerning cough, you can start with a General Medicine/Family Medicine doctor. Depending on the cause, you may be referred to a Respiratory Medicine/Pulmonology specialist. Seek urgent care if coughing is associated with severe breathing difficulty, significant chest pain, coughing up a large amount of blood, or severe deterioration."
+  },
+  {
+    "intent": "rash",
+    "question": "Which doctor should I consult for a rash or skin problem?",
+    "examples": ["I have rashes", "I have a rash", "what doctor treats skin problems", "my skin is itchy", "skin problem", "rshes", "rash on my body", "itchy skin"],
+    "keywords": ["rash", "rashes", "skin", "itching", "itchy", "acne", "dermatology", "dermatologist"],
+    "category": "symptoms",
+    "answer": "Skin rashes and persistent skin problems are commonly assessed by a Dermatologist (Dermatology). If the rash is sudden and severe, involves swelling of the face or throat, or causes breathing difficulty, seek emergency medical care."
+  },
+  {
+    "intent": "headache",
+    "question": "What should I do about a headache?",
+    "examples": ["I have headache", "head pain", "why does my head hurt", "headache problem"],
+    "keywords": ["headache", "head", "migraine", "head pain"],
+    "category": "symptoms",
+    "answer": "Headaches can have many causes. Note when they started, how severe they are, and whether other symptoms are present. A sudden extremely severe headache, especially with weakness, confusion, fainting, vision changes, or other neurological symptoms, requires urgent medical evaluation."
+  },
+  {
+    "intent": "stomach_pain",
+    "question": "Who should I consult for stomach or abdominal pain?",
+    "examples": ["I have stomach pain", "my abdomen hurts", "abdominal pain", "pain in my belly", "stomach problem"],
+    "keywords": ["stomach", "abdomen", "abdominal", "belly", "pain", "gastric"],
+    "category": "symptoms",
+    "answer": "For ongoing or unexplained abdominal pain, a General Medicine doctor can perform an initial assessment and refer you if needed. Severe or rapidly worsening abdominal pain, especially with fainting, persistent vomiting, significant bleeding, or severe weakness, needs urgent medical attention."
+  },
+  {
+    "intent": "back_pain",
+    "question": "Which department handles back pain?",
+    "examples": ["my back hurts", "I have back pain", "doctor for back pain", "lower back problem"],
+    "keywords": ["back", "back pain", "spine", "lower back", "lumbar"],
+    "category": "symptoms",
+    "answer": "Back pain can be assessed initially by General Medicine or a musculoskeletal specialist. Depending on the cause, Orthopedics, Physiotherapy, or another specialist may be involved. Severe weakness, loss of bladder or bowel control, or serious injury requires urgent evaluation."
+  },
+  {
+    "intent": "joint_pain",
+    "question": "Which doctor treats bone and joint problems?",
+    "examples": ["my knee hurts", "joint pain", "bone pain", "arthritis problem", "doctor for knee pain", "orthopedic doctor"],
+    "keywords": ["bone", "joint", "knee", "arthritis", "orthopedic", "shoulder", "hip"],
+    "category": "departments",
+    "answer": "Bone, joint, muscle, and many injury-related problems are commonly handled by Orthopedics. Depending on the problem, a Rheumatology or Physiotherapy referral may also be appropriate."
+  },
+  {
+    "intent": "breathing_problem",
+    "question": "What should I do if I have breathing difficulty?",
+    "examples": ["I cannot breathe properly", "shortness of breath", "difficulty breathing", "breathing problem", "I am breathless"],
+    "keywords": ["breathing", "breath", "shortness", "breathless", "respiratory", "lungs"],
+    "category": "emergency",
+    "answer": "Breathing difficulty can have many causes. If breathing is severe, sudden, rapidly worsening, or associated with blue/grey lips, severe chest pain, confusion, fainting, or inability to speak normally because of breathlessness, seek emergency medical care immediately."
+  },
+  {
+    "intent": "chest_pain",
+    "question": "What should I do about chest pain?",
+    "examples": ["I have chest pain", "pain in my chest", "chest pressure", "my chest hurts"],
+    "keywords": ["chest", "chest pain", "pressure", "tightness"],
+    "category": "emergency",
+    "answer": "Chest pain can have serious causes. New, severe, persistent, or unexplained chest pain—especially with sweating, nausea, fainting, or breathing difficulty—should be treated as urgent and evaluated immediately."
+  },
+  {
+    "intent": "emergency",
+    "question": "What are emergency warning signs?",
+    "examples": ["when should I go to emergency", "is this an emergency", "emergency symptoms", "danger signs", "urgent medical symptoms"],
+    "keywords": ["emergency", "urgent", "danger", "severe", "unconscious", "stroke", "bleeding"],
+    "category": "emergency",
+    "answer": "Emergency care may be needed for severe breathing difficulty, severe or persistent chest pain, unconsciousness, signs of stroke, severe bleeding, seizures, severe allergic reactions, serious injuries, or rapidly worsening symptoms. If you believe there is an immediate danger, contact your local emergency service or go to the nearest emergency department."
+  },
+  {
+    "intent": "stroke",
+    "question": "What are warning signs of a stroke?",
+    "examples": ["stroke symptoms", "signs of stroke", "face drooping", "sudden weakness", "speech problem suddenly"],
+    "keywords": ["stroke", "face", "weakness", "speech", "arm", "paralysis"],
+    "category": "emergency",
+    "answer": "Possible stroke warning signs include sudden facial drooping, sudden weakness or numbness especially on one side, sudden trouble speaking or understanding, sudden vision problems, severe dizziness, or difficulty walking. These symptoms require immediate emergency evaluation."
+  },
+  {
+    "intent": "allergy",
+    "question": "What should I do about an allergic reaction?",
+    "examples": ["I have an allergy", "allergic reaction", "skin allergy", "food allergy", "medicine allergy"],
+    "keywords": ["allergy", "allergic", "reaction", "swelling", "hives"],
+    "category": "symptoms",
+    "answer": "Mild allergic symptoms should be discussed with a healthcare professional. Swelling of the face, lips, tongue, or throat, difficulty breathing, fainting, or rapidly worsening symptoms can indicate a severe allergic reaction and require emergency care."
+  },
+  {
+    "intent": "skin_department",
+    "question": "What does Dermatology treat?",
+    "examples": ["what is dermatology", "skin doctor department", "what does dermatologist treat", "skin department"],
+    "keywords": ["dermatology", "dermatologist", "skin", "hair", "nails", "acne"],
+    "category": "departments",
+    "answer": "Dermatology focuses on conditions involving the skin, hair, and nails. Common concerns include acne, rashes, itching, infections, pigmentation changes, and many other skin conditions."
+  },
+  {
+    "intent": "general_medicine",
+    "question": "What does General Medicine treat?",
+    "examples": ["what is general medicine", "general physician", "which doctor for general problems", "medicine department"],
+    "keywords": ["general medicine", "general physician", "physician", "adult", "doctor"],
+    "category": "departments",
+    "answer": "General Medicine provides assessment and management for many adult health concerns. It can also coordinate care and refer patients to specialists when a more specific evaluation is needed."
+  },
+  {
+    "intent": "pulmonology",
+    "question": "What does Pulmonology treat?",
+    "examples": ["lung doctor", "respiratory specialist", "pulmonologist", "lung department", "breathing specialist"],
+    "keywords": ["pulmonology", "pulmonologist", "lungs", "respiratory", "breathing"],
+    "category": "departments",
+    "answer": "Pulmonology/Respiratory Medicine focuses on diseases and problems involving the lungs and respiratory system, including persistent cough, breathing difficulties, and some chronic respiratory conditions."
+  },
+  {
+    "intent": "cardiology",
+    "question": "What does Cardiology treat?",
+    "examples": ["heart doctor", "cardiologist", "cardiology department", "heart specialist"],
+    "keywords": ["cardiology", "cardiologist", "heart", "cardiac", "blood pressure"],
+    "category": "departments",
+    "answer": "Cardiology focuses on the heart and cardiovascular system. People may be referred for concerns such as chest symptoms, heart rhythm problems, or cardiovascular risk assessment."
+  },
+  {
+    "intent": "neurology",
+    "question": "What does Neurology treat?",
+    "examples": ["brain doctor", "neurologist", "neurology department", "nerve specialist"],
+    "keywords": ["neurology", "neurologist", "brain", "nerves", "seizure", "migraine"],
+    "category": "departments",
+    "answer": "Neurology focuses on disorders of the brain, spinal cord, nerves, and related systems. Symptoms such as certain persistent headaches, seizures, weakness, numbness, or neurological changes may require neurological assessment."
+  },
+  {
+    "intent": "orthopedics",
+    "question": "What does Orthopedics treat?",
+    "examples": ["orthopedic department", "bone doctor", "joint doctor", "fracture doctor"],
+    "keywords": ["orthopedics", "orthopedic", "bones", "joints", "fracture", "muscles"],
+    "category": "departments",
+    "answer": "Orthopedics focuses on the musculoskeletal system, including bones, joints, muscles, ligaments, tendons, and many injuries."
+  },
+  {
+    "intent": "pediatrics",
+    "question": "What does Pediatrics treat?",
+    "examples": ["child doctor", "children doctor", "pediatrician", "kids department"],
+    "keywords": ["pediatrics", "pediatrician", "child", "children", "baby", "kids"],
+    "category": "departments",
+    "answer": "Pediatrics provides medical care for infants, children, and adolescents. Children's symptoms should be assessed according to their age and individual circumstances."
+  },
+  {
+    "intent": "gynecology",
+    "question": "What does Gynecology treat?",
+    "examples": ["women health doctor", "gynecologist", "gynecology department", "female health"],
+    "keywords": ["gynecology", "gynecologist", "women", "female", "period", "reproductive"],
+    "category": "departments",
+    "answer": "Gynecology focuses on many aspects of female reproductive and pelvic health, including menstrual concerns and other gynecological conditions."
+  },
+  {
+    "intent": "ent",
+    "question": "What does ENT treat?",
+    "examples": ["ear nose throat doctor", "ENT doctor", "ear problem", "nose problem", "throat problem"],
+    "keywords": ["ent", "ear", "nose", "throat", "hearing", "sinus"],
+    "category": "departments",
+    "answer": "ENT (Ear, Nose and Throat) specialists assess conditions involving the ears, nose, throat, sinuses, hearing, and related structures."
+  },
+  {
+    "intent": "ophthalmology",
+    "question": "What does Ophthalmology treat?",
+    "examples": ["eye doctor", "ophthalmologist", "eye department", "vision problem"],
+    "keywords": ["ophthalmology", "ophthalmologist", "eye", "vision", "eyesight"],
+    "category": "departments",
+    "answer": "Ophthalmology focuses on eye health, vision problems, and diseases or injuries affecting the eyes."
+  },
+  {
+    "intent": "dentistry",
+    "question": "What does Dentistry treat?",
+    "examples": ["dentist", "tooth pain", "teeth doctor", "dental department"],
+    "keywords": ["dentist", "dentistry", "tooth", "teeth", "dental", "gums"],
+    "category": "departments",
+    "answer": "Dentistry focuses on teeth, gums, oral health, and related dental problems."
+  },
+  {
+    "intent": "blood_test",
+    "question": "How should I prepare for a blood test?",
+    "examples": ["blood test preparation", "do I need fasting for blood test", "can I eat before blood test", "blood test fasting"],
+    "keywords": ["blood", "test", "fasting", "laboratory", "lab"],
+    "category": "tests",
+    "answer": "Preparation depends on the specific blood test. Some tests require fasting while others do not. Follow the instructions provided by your healthcare professional or laboratory rather than assuming that fasting is always necessary."
+  },
+  {
+    "intent": "medical_test",
+    "question": "Why do doctors order medical tests?",
+    "examples": ["purpose of medical test", "why do I need a test", "what is medical testing for", "why blood test"],
+    "keywords": ["test", "medical test", "diagnosis", "monitor", "screening", "laboratory"],
+    "category": "tests",
+    "answer": "Medical tests can help healthcare professionals gather information, investigate symptoms, monitor health or treatment, assess risks, and support clinical decision-making."
+  },
+  {
+    "intent": "xray",
+    "question": "What is an X-ray?",
+    "examples": ["x ray test", "what is xray", "why xray", "xray scan"],
+    "keywords": ["xray", "x-ray", "radiology", "bone"],
+    "category": "tests",
+    "answer": "An X-ray uses a small amount of ionizing radiation to create images of structures inside the body. It is commonly used to evaluate bones and can also be used for some chest and other examinations."
+  },
+  {
+    "intent": "ultrasound",
+    "question": "What is an ultrasound?",
+    "examples": ["ultrasound test", "what is ultrasound", "sonography", "ultrasound scan"],
+    "keywords": ["ultrasound", "sonography", "scan", "sound waves"],
+    "category": "tests",
+    "answer": "Ultrasound uses high-frequency sound waves to create images of structures inside the body. It is used for many different types of examinations."
+  },
+  {
+    "intent": "ct_scan",
+    "question": "What is a CT scan?",
+    "examples": ["CT test", "CT scan meaning", "what does CT scan do", "computed tomography"],
+    "keywords": ["ct", "ct scan", "tomography", "scan"],
+    "category": "tests",
+    "answer": "A CT scan uses X-rays and computer processing to create detailed cross-sectional images of the body. Your healthcare professional decides whether it is appropriate based on the clinical situation."
+  },
+  {
+    "intent": "mri",
+    "question": "What is an MRI?",
+    "examples": ["MRI test", "MRI scan meaning", "what is MRI", "magnetic resonance"],
+    "keywords": ["mri", "magnetic", "resonance", "scan"],
+    "category": "tests",
+    "answer": "MRI uses a strong magnetic field and radio waves to create detailed images of the body. It does not use ionizing X-ray radiation. Tell the healthcare team about implants or metal devices before an MRI."
+  },
+  {
+    "intent": "medicine_information",
+    "question": "Can UrClinic give me medicine or a prescription?",
+    "examples": ["give me medication", "give me medicine", "can you prescribe", "medicine assistant", "medication assistant", "prescription", "medicne"],
+    "keywords": ["medicine", "medication", "drug", "prescription", "tablet", "dose", "pharmacy"],
+    "category": "medication",
+    "answer": "UrClinic does not prescribe medicines or provide personalized dosing. I can explain general educational information about medicines, but medication choices should be made with a qualified doctor or pharmacist who knows your medical history."
+  },
+  {
+    "intent": "medication_safety",
+    "question": "How can I use medicines safely?",
+    "examples": ["medicine safety", "how to take medicine safely", "medication precautions", "drug safety"],
+    "keywords": ["medicine", "medication", "safety", "precaution", "drug"],
+    "category": "medication",
+    "answer": "Use medicines according to the instructions from your healthcare professional or official product information. Do not change a prescribed dose, combine medicines, or stop a prescribed medicine without appropriate professional advice."
+  },
+  {
+    "intent": "antibiotics",
+    "question": "What should I know about antibiotics?",
+    "examples": ["what are antibiotics", "antibiotic medicine", "do antibiotics treat everything", "antibiotic safety"],
+    "keywords": ["antibiotic", "antibiotics", "bacteria", "infection"],
+    "category": "medication",
+    "answer": "Antibiotics are medicines used to treat certain bacterial infections. They do not treat viral infections such as many common colds. Antibiotics should be used only when appropriate and according to professional advice."
+  },
+  {
+    "intent": "painkillers",
+    "question": "What should I know about pain medicines?",
+    "examples": ["painkiller information", "pain medicine", "medicine for pain", "analgesic"],
+    "keywords": ["painkiller", "pain medicine", "analgesic", "pain"],
+    "category": "medication",
+    "answer": "Different pain medicines have different benefits, risks, interactions, and precautions. The safest choice depends on the person's health, other medicines, allergies, age, and the cause of pain. Ask a healthcare professional or pharmacist for personalized advice."
+  },
+  {
+    "intent": "appointment",
+    "question": "How should I prepare for a hospital appointment?",
+    "examples": ["hospital appointment preparation", "what should I bring to doctor", "prepare for appointment", "doctor appointment"],
+    "keywords": ["appointment", "doctor", "hospital", "reports", "documents", "medications"],
+    "category": "hospital",
+    "answer": "Bring your appointment details, identification if required, current medication and supplement information, relevant previous reports, and a list of important symptoms or questions you want to discuss."
+  },
+  {
+    "intent": "hospital_departments",
+    "question": "How do I choose the right hospital department?",
+    "examples": ["which department should I visit", "where should I go in hospital", "which doctor do I need", "right department"],
+    "keywords": ["department", "doctor", "hospital", "specialist", "clinic"],
+    "category": "hospital",
+    "answer": "For many general or unclear concerns, General Medicine can provide an initial assessment. Specific symptoms may point toward departments such as Dermatology for skin concerns, Orthopedics for bone and joint problems, Cardiology for heart-related concerns, or ENT for ear, nose, and throat problems."
+  },
+  {
+    "intent": "doctor_vs_emergency",
+    "question": "When should I visit a doctor versus emergency care?",
+    "examples": ["doctor or emergency", "should I go to ER", "when is emergency needed", "clinic or emergency"],
+    "keywords": ["doctor", "emergency", "ER", "urgent", "clinic"],
+    "category": "hospital",
+    "answer": "Routine or non-urgent concerns can generally be discussed with a doctor or clinic. Severe breathing difficulty, severe chest pain, unconsciousness, major bleeding, stroke warning signs, severe allergic reactions, or rapidly worsening symptoms require urgent emergency evaluation."
+  },
+  {
+    "intent": "doctor_replacement",
+    "question": "Can UrClinic replace a doctor?",
+    "examples": ["are you a doctor", "can you replace doctor", "do I need doctor", "can AI diagnose me"],
+    "keywords": ["doctor", "diagnosis", "replace", "ai", "doctor replacement"],
+    "category": "safety",
+    "answer": "No. UrClinic is an educational hospital FAQ assistant. It can help explain general health information and hospital navigation, but it cannot replace a qualified healthcare professional or provide a definitive diagnosis."
+  },
+  {
+    "intent": "symptom_information",
+    "question": "Can symptoms alone confirm a diagnosis?",
+    "examples": ["can symptoms diagnose disease", "do symptoms tell the disease", "can I diagnose myself", "symptoms diagnosis"],
+    "keywords": ["symptoms", "diagnosis", "disease", "diagnose"],
+    "category": "safety",
+    "answer": "Symptoms can have many possible causes, so symptoms alone usually cannot confirm a diagnosis. Healthcare professionals may use history, examination, and appropriate tests to determine the cause."
+  },
+  {
+    "intent": "health_checkup",
+    "question": "What is a general health checkup?",
+    "examples": ["health checkup", "routine checkup", "annual checkup", "general medical examination"],
+    "keywords": ["checkup", "health", "screening", "routine", "examination"],
+    "category": "prevention",
+    "answer": "A general health checkup is an opportunity to review health history, risk factors, symptoms, lifestyle, and appropriate preventive care. The tests needed vary by age, health history, and individual risk."
+  },
+  {
+    "intent": "blood_pressure",
+    "question": "What is blood pressure?",
+    "examples": ["blood pressure meaning", "BP meaning", "what is BP", "high blood pressure"],
+    "keywords": ["blood pressure", "bp", "hypertension", "pressure"],
+    "category": "general health",
+    "answer": "Blood pressure is the force of circulating blood against the walls of blood vessels. Persistent high blood pressure can increase cardiovascular risk, so readings should be interpreted in context by a healthcare professional."
+  },
+  {
+    "intent": "diabetes",
+    "question": "What is diabetes?",
+    "examples": ["diabetes information", "what is diabetes", "sugar disease", "blood sugar problem"],
+    "keywords": ["diabetes", "blood sugar", "glucose", "sugar"],
+    "category": "general health",
+    "answer": "Diabetes is a group of conditions involving elevated blood glucose levels. Management depends on the type of diabetes and the individual, and may involve lifestyle measures, monitoring, and medicines prescribed by healthcare professionals."
+  },
+  {
+    "intent": "dehydration",
+    "question": "What are common signs of dehydration?",
+    "examples": ["dehydration symptoms", "lack of water", "dehydrated", "signs of dehydration"],
+    "keywords": ["dehydration", "water", "thirst", "urine", "fluids"],
+    "category": "general health",
+    "answer": "Common signs of dehydration can include thirst, dry mouth, reduced urination, dark urine, tiredness, and dizziness. Severe dehydration can be dangerous and may require urgent medical care."
+  },
+  {
+    "intent": "nutrition",
+    "question": "What is a balanced diet?",
+    "examples": ["healthy diet", "balanced food", "nutrition advice", "what should I eat"],
+    "keywords": ["diet", "nutrition", "food", "balanced", "healthy eating"],
+    "category": "general health",
+    "answer": "A balanced diet generally includes a variety of vegetables and fruits, whole grains or other nutritious carbohydrates, protein sources, and appropriate amounts of healthy fats, while limiting excessive added sugars, salt, and highly processed foods."
+  },
+  {
+    "intent": "sleep",
+    "question": "Why is sleep important?",
+    "examples": ["importance of sleep", "why sleep matters", "sleep health", "healthy sleep"],
+    "keywords": ["sleep", "rest", "insomnia", "tired"],
+    "category": "general health",
+    "answer": "Adequate sleep supports physical health, brain function, mood, learning, and recovery. Persistent or severe sleep problems should be discussed with a healthcare professional."
+  },
+  {
+    "intent": "mental_health",
+    "question": "Where can I get help for mental health concerns?",
+    "examples": ["mental health help", "I feel anxious", "depression help", "psychologist", "psychiatrist"],
+    "keywords": ["mental", "anxiety", "depression", "stress", "psychologist", "psychiatrist"],
+    "category": "mental health",
+    "answer": "Mental health concerns can be discussed with a qualified mental-health professional such as a psychologist, psychiatrist, or appropriately trained healthcare provider. If someone is in immediate danger or may harm themselves or others, seek emergency help immediately."
+  },
+  {
+    "intent": "vaccination",
+    "question": "Why are vaccinations important?",
+    "examples": ["why vaccines", "vaccination information", "immunization", "vaccine purpose"],
+    "keywords": ["vaccine", "vaccination", "immunization", "immunity"],
+    "category": "prevention",
+    "answer": "Vaccines help the immune system develop protection against specific infectious diseases. Recommended vaccines depend on factors such as age, health conditions, travel, and local public-health guidance."
+  },
+  {
+    "intent": "infection_prevention",
+    "question": "How can I reduce the spread of infections?",
+    "examples": ["prevent infection", "avoid spreading germs", "infection prevention", "how to stay healthy"],
+    "keywords": ["infection", "germs", "hygiene", "handwashing", "prevention"],
+    "category": "prevention",
+    "answer": "Helpful measures include regular hand hygiene, appropriate vaccination, staying home when seriously ill when possible, good respiratory hygiene, safe food practices, and following healthcare or public-health guidance."
+  },
+  {
+    "intent": "follow_up",
+    "question": "Why is follow-up care important?",
+    "examples": ["why follow up", "doctor follow up", "follow-up appointment", "return visit"],
+    "keywords": ["followup", "follow-up", "appointment", "monitoring", "review"],
+    "category": "hospital",
+    "answer": "Follow-up appointments help healthcare professionals monitor symptoms, review test results, assess treatment response, and adjust care when needed."
+  },
+  {
+    "intent": "test_results",
+    "question": "Can UrClinic interpret my medical test results?",
+    "examples": ["read my blood report", "interpret my test", "what does my report mean", "lab results"],
+    "keywords": ["report", "results", "blood test", "lab", "interpret"],
+    "category": "safety",
+    "answer": "I can explain general medical terminology, but test results need to be interpreted in the context of your symptoms, medical history, examination, and the laboratory's reference ranges. A healthcare professional should make clinical decisions based on your results."
+  },
+  {
+    "intent": "medical_history",
+    "question": "Why should I tell my doctor about my medical history?",
+    "examples": ["why medical history", "tell doctor previous diseases", "medical history importance"],
+    "keywords": ["history", "medical history", "disease", "doctor", "medication"],
+    "category": "hospital",
+    "answer": "Medical history helps healthcare professionals understand previous conditions, treatments, allergies, surgeries, medicines, and risk factors. This information can improve clinical decision-making and medication safety."
+  },
+  {
+    "intent": "allergies_to_doctor",
+    "question": "Should I tell my doctor about allergies?",
+    "examples": ["tell doctor about allergy", "medicine allergy", "allergy history", "allergic to medicine"],
+    "keywords": ["allergy", "allergies", "medicine", "doctor", "reaction"],
+    "category": "medication",
+    "answer": "Yes. Tell healthcare professionals about known allergies, especially medication allergies and previous serious reactions. This information can be important for safe treatment decisions."
+  },
+  {
+    "intent": "prescription",
+    "question": "What is a prescription?",
+    "examples": ["what does prescription mean", "prescription meaning", "doctor prescription"],
+    "keywords": ["prescription", "medicine", "doctor", "pharmacy"],
+    "category": "medication",
+    "answer": "A prescription is an authorized instruction from a qualified healthcare professional for a medicine or treatment. Prescription requirements and rules vary by medicine and location."
+  },
+  {
+    "intent": "pharmacist",
+    "question": "What can a pharmacist help with?",
+    "examples": ["pharmacist role", "what does pharmacist do", "ask pharmacist about medicine"],
+    "keywords": ["pharmacist", "pharmacy", "medicine", "drug"],
+    "category": "medication",
+    "answer": "Pharmacists can provide medication-related guidance, including information about how medicines are used, potential interactions, precautions, and appropriate use. They can also advise when a medical assessment is needed."
+  },
+  {
+    "intent": "urgent_care",
+    "question": "What does urgent medical care mean?",
+    "examples": ["urgent care meaning", "urgent medical attention", "when is care urgent"],
+    "keywords": ["urgent", "medical attention", "emergency", "immediate"],
+    "category": "emergency",
+    "answer": "Urgent medical care means getting prompt professional assessment when a condition may worsen or requires timely treatment. Severe or life-threatening symptoms should be handled through emergency services rather than waiting for a routine appointment."
+  },
+  {
+    "intent": "hospital_records",
+    "question": "Why are medical records important?",
+    "examples": ["medical records", "hospital records", "patient records importance"],
+    "keywords": ["records", "medical records", "patient", "history"],
+    "category": "hospital",
+    "answer": "Medical records help healthcare teams understand a patient's history, previous investigations, treatments, medicines, allergies, and ongoing care."
+  },
+  {
+    "intent": "second_opinion",
+    "question": "What is a second medical opinion?",
+    "examples": ["second opinion", "another doctor opinion", "should I get second opinion"],
+    "keywords": ["second opinion", "doctor", "specialist", "diagnosis"],
+    "category": "hospital",
+    "answer": "A second opinion is an additional professional assessment from another qualified healthcare provider. It can sometimes help clarify a diagnosis, treatment options, or complex medical decisions."
+  },
+  {
+    "intent": "specialist_referral",
+    "question": "Why might I need a specialist referral?",
+    "examples": ["why specialist", "doctor referral", "need specialist", "specialist appointment"],
+    "keywords": ["specialist", "referral", "doctor", "department"],
+    "category": "hospital",
+    "answer": "A specialist referral may be recommended when a problem requires expertise in a particular area, when symptoms persist, or when further specialized evaluation or treatment is appropriate."
+  },
+  {
+    "intent": "privacy",
+    "question": "Should I share private medical information with an AI chatbot?",
+    "examples": ["is my medical information safe", "privacy", "personal medical information", "should I enter my data"],
+    "keywords": ["privacy", "private", "personal", "medical information", "data"],
+    "category": "safety",
+    "answer": "Avoid sharing unnecessary personally identifying or highly sensitive information in a chatbot. UrClinic is intended for general educational information, not as a replacement for confidential clinical communication with a healthcare professional."
+  },
+  {
+    "intent": "thanks",
+    "question": "Thank you",
+    "examples": ["thanks", "thank you", "thx", "great thanks", "okay thanks"],
+    "keywords": ["thanks", "thank", "thx"],
+    "category": "general",
+    "answer": "You're welcome! 😊 If you have another hospital or health-information question, feel free to ask."
+  },
+  {
+    "intent": "goodbye",
+    "question": "Goodbye",
+    "examples": ["bye", "goodbye", "see you", "exit", "quit"],
+    "keywords": ["bye", "goodbye", "exit"],
+    "category": "general",
+    "answer": "Take care! 👋 Remember, UrClinic provides general educational information and does not replace professional medical care."
+  }
+]
